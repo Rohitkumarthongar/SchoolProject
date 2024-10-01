@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+</head>
+<body>
+<h1>
+    Hi, My Name is {{stu_name|capfirst }} and My Roll No is {{roll_no }}, I am in {{ division }} std.
+
+    {% if stu_details.roll_no == 45 %}
+    <h1>Student Roll No Is : {{roll_no }}</h1>
+    {% endif %}
+    <span>I registered here on {{ d|date:"DATE_FORMAT" }}</span>
+
+<!--    {{student_list}}-->
+    <h1>
+        Student List:
+        <ul>
+            {% for key,value in student_list.items %}
+            <li>{{ key }} : {{value}}</li>
+            {% empty %}
+            <h2>Sorry Boss </h2>
+            {% endfor %}
+        </ul>
+    </h1>
+</h1>
+
+    <h1>
+       Forloop.counter  -
+        <ul>
+            {% for l in student_list.items %}
+            <li>{{forloop.counter}} : {{l}}</li>
+
+            {% endfor %}
+        </ul>
+    </h1>
+
+
+ <h1>
+        Forloop.counter0  -   :
+        <ul>
+            {% for l in student_list.items %}
+            <li>{{forloop.counter0}} : {{l}}</li>
+
+            {% endfor %}
+        </ul>
+    </h1>
+
+ <h1>
+        Forloop.revcounter  -   :
+        <ul>
+            {% for l in student_list.items %}
+            <li>{{forloop.revcounter}} : {{l}}</li>
+
+            {% endfor %}
+        </ul>
+    </h1>
+
+ <h1>
+        Forloop.revcounter0  -   :
+        <ul>
+            {% for l in student_list.items %}
+            <li>{{forloop.revcounter0}} : {{l}}</li>
+
+            {% endfor %}
+        </ul>
+    </h1>
+
+
+
+ <h1>
+        Forloop.first  -   :
+        <ul>
+            {% for l in student_list.items %}
+            <li>{{forloop.first}} : {{l}}</li>
+
+            {% endfor %}
+        </ul>
+    </h1>
+ <h1>
+        Forloop.last  -   :
+        <ul>
+            {% for l in student_list.items %}
+            <li>{{forloop.last}} : {{l}}</li>
+
+            {% endfor %}
+        </ul>
+    </h1>
+
+ <h1>
+        Forloop.parentloop  -   :
+        <ul>
+            {% for l in student_list.items %}
+            <li>{{forloop.parentloop}} : {{l}}</li>
+
+            {% endfor %}
+        </ul>
+    </h1>
+
+</body>
+</html>

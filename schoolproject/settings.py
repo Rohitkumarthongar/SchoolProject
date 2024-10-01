@@ -14,7 +14,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATE_DIR= BASE_DIR/ 'template'
+TEMPLATE_DIR= BASE_DIR/ 'templates'
 STATIC_DIR = BASE_DIR/ 'static'
 
 # Quick-start development settings - unsuitable for production
@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'course',
     'result',
     'registration',
+    'student',
+    'staff_details',
 ]
 
 MIDDLEWARE = [
@@ -58,13 +60,13 @@ ROOT_URLCONF = 'schoolproject.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR],
+        'BACKEND': 'django.templates.backends.django.DjangoTemplates',
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
+                'django.templates.context_processors.debug',
+                'django.templates.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],

@@ -34,4 +34,7 @@ urlpatterns = [
     ])),
 
     path('crs/',include('course.urls')),
+    path('stud/',include('student.urls')),
+    path('staff/',include('staff_details.urls')),
+
 ]
